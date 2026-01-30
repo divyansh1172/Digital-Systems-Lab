@@ -1,0 +1,20 @@
+* Part C Case 3: RC << T
+* File: rc_sq_case3.cir
+
+* Circuit Description
+* Pulse: 0V to 5V, 0 delay, 1u rise/fall, width 10m, period 20m
+V1 1 0 PULSE (0 5 0 1u 1u 10m 20m)
+R1 1 2 1k
+C1 2 0 1u
+
+* Simulation Commands
+.tran 0.1m 40m
+
+* Plotting configuration
+.control
+run
+set color0=white
+set color1=black
+plot v(1) v(2) title 'Square Wave: RC << T'
+.endc
+.end

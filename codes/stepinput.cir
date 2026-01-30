@@ -1,0 +1,20 @@
+* Part A: Step Input Response
+* File: rc_step.cir
+
+* Circuit Description
+V1 1 0 PULSE (0 5 1m 1u 1u 10m 20m)
+R1 1 2 1k
+C1 2 0 1u
+
+* Simulation Commands
+.tran 0.01m 20m
+
+* Plotting
+.control
+run
+* Optional: Set white background for report
+set color0=white
+set color1=black
+plot v(1) v(2) title 'Step Input Response'
+.endc
+.end

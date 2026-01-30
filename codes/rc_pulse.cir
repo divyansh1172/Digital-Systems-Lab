@@ -1,0 +1,19 @@
+* Part B: Single Pulse Input
+* File: rc_pulse.cir
+
+* Circuit Description
+V1 1 0 PULSE (0 5 0 1u 1u 2m 10m)
+R1 1 2 1k
+C1 2 0 1u
+
+* Simulation Commands
+.tran 0.01m 10m
+
+* Plotting
+.control
+run
+set color0=white
+set color1=black
+plot v(1) v(2) title 'Pulse Input Response'
+.endc
+.end
